@@ -13,16 +13,32 @@ import { withInfo } from '@storybook/addon-info';
  * as one object and are renamed to "t", this is shorter. Look below how
  * to wrap texts with them.
  */
-import Section, {SectionHeader, SectionText} from '.';
+import styled, { injectGlobal } from 'styled-components';
+import Section, {SectionHeader, SectionText, invSection} from '.';
+import * as ts from '../Typography/styles';
+
+const container = styled.section`
+  background: red;
+`;
+
 
 storiesOf('Section', module) // eslint-disable-line no-undef
   .add('index',
-    withInfo(`
- Section component provides a container with paddings.
-    `)(() => (
+    withInfo(`Section component provides a container with paddings.`)(() => (
       <Section>
-        <SectionHeader>Test</SectionHeader>
-        <SectionText>Text inside the section (with typography).</SectionText>
-        <p>Text inside the section (without typography).</p>
+        <ts.Header2>Keynotes, talks and workshops from the forefront of Design Systems.</ts.Header2>
+        <ts.BodyLarge>DSCONF has 4 long, and 6 shorter speeches during the conference day. We are aiming to bring abundance of tangible information to attendees with real cases and learnings. 
+        The second day of DSCONF is dedicated to workshops. There is a total number of 5 workshops, and you can purchase them separately.
+        The workshops are either half-day or full-day.
+		</ts.BodyLarge>
+      </Section>
+  ))).add('inverted',
+    withInfo(`Section component provides an inverted container with paddings.`)(() => (
+      <Section>
+        <ts.Header2 inverted>Keynotes, talks and workshops from the forefront of Design Systems.</ts.Header2>
+        <ts.BodyLarge inverted>DSCONF has 4 long, and 6 shorter speeches during the conference day. We are aiming to bring abundance of tangible information to attendees with real cases and learnings. 
+        The second day of DSCONF is dedicated to workshops. There is a total number of 5 workshops, and you can purchase them separately.
+        The workshops are either half-day or full-day.
+		</ts.BodyLarge>
       </Section>
   )));
