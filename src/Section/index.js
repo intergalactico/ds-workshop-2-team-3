@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import { node, arrayOf, oneOfType } from 'prop-types';
+
 /*
  * For its styles, Section component uses plain CSS.
  * Change it to styled-components, if you want.
@@ -13,7 +14,7 @@ import './styles.css';
  * Even though the component is using plain CSS, it still can re-use
  * styled-components from other patterns.
  */
-import * as ts from '../Typography/styles.js';
+import * as ts from '../Typography/styles';
 
 /*
  * Note! When using plain CSS, the class names have to be provided manually.
@@ -33,6 +34,24 @@ Section.propTypes = {
 };
 
 export default Section;
+
+
+const InvSection = ({ children }) => {
+  return (
+    <div className="section inverted">
+      <div className="section__inner">
+        {children}
+      </div>
+    </div>
+  );
+};
+
+InvSection.propTypes = {
+  children: oneOfType([arrayOf(node), node])
+};
+
+export { InvSection };
+
 
 /*
  * For re-use of Typography styles, Section component has a couple of subcomponents to be
