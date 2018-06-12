@@ -6,5 +6,7 @@ import SiteHeader from '.'
 
 storiesOf('SiteHeader', module)
   .add('index', () => (
-    <SiteHeader />
+    <div style={{ background: 'blue' }}>
+      <SiteHeader />
+    </div>
   ))
