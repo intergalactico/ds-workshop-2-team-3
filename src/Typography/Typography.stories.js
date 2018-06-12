@@ -8,6 +8,7 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 
 import Typography from '.';
+import Inverted from './inverted.js';
 
 /*
  * The story (documentation) for the Typography component
@@ -17,9 +18,9 @@ import Typography from '.';
 
 storiesOf('Typography', module) // eslint-disable-line no-undef
   .add('index',
-    withInfo(`
- Typography component is needed to provide global CSS such as
- font and styles to use across all the other components.
-        `)(() => (
+    withInfo(`Typography component.`)(() => (
       <Typography />
+    ))).add('inverted',
+    withInfo(`inverted Typography.`)(() => (
+      <Inverted />
     )));

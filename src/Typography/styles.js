@@ -76,13 +76,13 @@ export const Header1 = styled.h1`
   font-weight: bold;
   line-height: 1.2em;
   letter-spacing: normal;
-  color: ${colors.dark};
+  color: ${props => props.inverted ? '#fff' : '#353740'};
 `;
 
 export const Header2 = styled.h2`
   font-family: futura-pt-bold, sans-serif;
   font-size: 48px;
-  color: ${colors.dark};
+  color: ${props => props.inverted ? '#fff' : '#353740'};
   line-height: 1.21em;
   margin: 0;
 `;
@@ -90,7 +90,7 @@ export const Header2 = styled.h2`
 export const Header3 = styled.h3`
   font-family: futura-pt-bold;
   font-size: 36px;
-  color: ${colors.dark};
+  color: ${props => props.inverted ? '#fff' : '#353740'};
   font-weight: 700;
   margin: 0;
 `;
@@ -98,7 +98,7 @@ export const Header3 = styled.h3`
 export const Header4 = styled.h3`
   font-family: futura-pt-bold;
   font-size: 22px;
-  color: ${colors.dark};
+  color: ${props => props.inverted ? '#fff' : '#353740'};
   font-weight: 700;
   margin: 0;
 `;
@@ -106,7 +106,7 @@ export const Header4 = styled.h3`
 export const Header5 = styled.h3`
   font-family: futura-pt-bold;
   font-size: 16px;
-  color: ${colors.grey};
+  color: ${props => props.inverted ? '#fff' : '#353740'};
   font-weight: 700;
   margin: 0;
 `;
@@ -118,7 +118,7 @@ export const P = styled.p`
 
 export const Body = styled.p`
   font-family: Open Sans;
-  color: ${colors.dark};
+  color: ${props => props.inverted ? '#fff' : '#353740'};
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
@@ -128,7 +128,7 @@ export const Body = styled.p`
 
 export const BodyLarge = styled.p`
   font-family: Open Sans;
-  color: ${colors.dark};
+  color: ${props => props.inverted ? '#fff' : '#353740'};
   font-size: 20px;
   font-weight: normal;
   font-style: normal;
