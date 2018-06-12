@@ -24,6 +24,11 @@ injectGlobal`
     font-style:italic;font-weight:400;
   }
 
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  src:url('https://fonts.googleapis.com/css?family=Lato|Open+Sans:400,600,700,800');
+}
+
   @font-face {
     font-family:"lato";
     src:url("https://use.typekit.net/af/4d053a/00000000000000000001522b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff2"),url("https://use.typekit.net/af/4d053a/00000000000000000001522b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff"),url("https://use.typekit.net/af/4d053a/00000000000000000001522b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("opentype");
@@ -67,18 +72,39 @@ import colors from '../Colors/colorset';
 
 export const Header1 = styled.h1`
   font-family: futura-pt-bold;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.2em;
+  letter-spacing: normal;
+  color: ${colors.dark};
 `;
 
 export const Header2 = styled.h2`
   font-family: futura-pt-bold, sans-serif;
-  font-size: 22px;
+  font-size: 48px;
   color: ${colors.dark};
-  line-height: 1.4em;
+  line-height: 1.21em;
   margin: 0;
 `;
 
 export const Header3 = styled.h3`
-  font-family: lato, sans-serif;
+  font-family: futura-pt-bold;
+  font-size: 36px;
+  color: ${colors.dark};
+  font-weight: 700;
+  margin: 0;
+`;
+
+export const Header4 = styled.h3`
+  font-family: futura-pt-bold;
+  font-size: 22px;
+  color: ${colors.dark};
+  font-weight: 700;
+  margin: 0;
+`;
+
+export const Header5 = styled.h3`
+  font-family: futura-pt-bold;
   font-size: 16px;
   color: ${colors.grey};
   font-weight: 700;
@@ -86,8 +112,39 @@ export const Header3 = styled.h3`
 `;
 
 export const P = styled.p`
-  font-family: lato;
+  font-family: Open Sans;
+  color: ${colors.grey};
+`;
+
+export const Body = styled.p`
+  font-family: Open Sans;
   color: ${colors.dark};
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.69;
+`;
+
+export const BodyLarge = styled.p`
+  font-family: Open Sans;
+  color: ${colors.dark};
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.7;
+`;
+
+export const Disclamer = styled.p`
+  font-family: Open Sans;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  color: ${colors.grey};
 `;
 
 /*
