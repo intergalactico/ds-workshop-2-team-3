@@ -7,7 +7,7 @@ const HeaderLogo = (props) => {
   return (
     <s.HeaderLogo>
       <img className='logo' src={props.logo}/>
-      <ts.Header3>{props.text}</ts.Header3>
+      <ts.Header3 inverted>{props.text}</ts.Header3>
     </s.HeaderLogo>
   )
 }

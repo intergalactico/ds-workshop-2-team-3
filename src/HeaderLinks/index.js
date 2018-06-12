@@ -7,7 +7,7 @@ const HeaderLinks = (props) => {
     <s.HeaderLinks>
       {props.links.map( (link) => {
         return (
-          <a style={{ padding: '0 5px'}}><ts.Body>{link}</ts.Body></a>
+          <a style={{ padding: '0 5px' }}><ts.Body inverted>{link}</ts.Body></a>
         )
       })}
     </s.HeaderLinks>
