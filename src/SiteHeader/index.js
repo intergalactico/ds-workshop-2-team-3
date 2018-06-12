@@ -4,11 +4,11 @@ import * as s from './styles.js'
 import DSCONFLOGO from '../../assets/dsconf-logo.png'
 import HeaderLogo from '../HeaderLogo'
 import HeaderLinks from '../HeaderLinks'
+import { string } from 'prop-types'
 
-const logo = DSCONFLOGO
 const links = ['Home', 'About', 'Event Overview']
 
-const SiteHeader = (props) => {
+const SiteHeader = () => {
   return (
     <s.SiteHeader>
       <HeaderLogo 
@@ -18,5 +18,10 @@ const SiteHeader = (props) => {
     </s.SiteHeader>
   )
 }
+
+SiteHeader.propTypes = {
+  text: string,
+  logo: string
+};
 
 export default SiteHeader

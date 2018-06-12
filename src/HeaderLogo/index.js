@@ -2,6 +2,7 @@ import React from 'react'
 import './styles.css'
 import * as s from './styles.js'
 import * as ts from '../Typography/styles.js'
+import { string } from 'prop-types'
 
 const HeaderLogo = (props) => {
   return (
@@ -11,5 +12,10 @@ const HeaderLogo = (props) => {
     </s.HeaderLogo>
   )
 }
+
+HeaderLogo.propTypes = {
+  text: string,
+  logo: string
+};
 
 export default HeaderLogo

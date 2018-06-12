@@ -6,7 +6,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { Icon, Section, SectionHeader, SectionText } from '../lib/my-awesome-library'
+import { Icon, Section, SectionHeader, SectionText, SimpleButton, HeaderLinks, SiteHeader, HeaderLogo, DSCONFICON } from '../lib/my-awesome-library'
 
 const st = Section.SectionTypography
 
@@ -14,6 +14,20 @@ const Home = () => {
   return (
     <div>
       <div>
+        <div style={{ background: 'blue' }}>
+          <SiteHeader />
+        </div>
+        <SimpleButton text='Click me'/>
+        <div style={{
+          background: 'black', 
+          height: '100px', 
+          width: '500px', 
+          display: 'flex',
+          alignContent: 'center',
+          justifyContent: 'center'}}>
+          <div style={{height: '50px'}}/>
+        <SimpleButton text='Click me' inverted />
+        </div>
         <Icon name='star' color='#000' isInverted size='0.785rem' />
         <Icon name='star' color='#888888' isInverted />
         <Icon name='github' color='#1b8ceb'isInverted size='1.5rem' />
