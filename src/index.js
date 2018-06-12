@@ -9,6 +9,10 @@ import Button from 'Button';
 import Icon from 'Icon';
 import Section, {SectionHeader, SectionText} from 'Section';
 import Typography from 'Typography';
+import SiteHeader from 'SiteHeader';
+import HeaderLinks from 'HeaderLinks';
+import HeaderLogo from 'HeaderLogo';
+import SimpleButton from 'SimpleButton';
 
 export {
   Box,
@@ -17,5 +21,9 @@ export {
   Section,
   SectionHeader,
   SectionText,
-  Typography
+  Typography,
+  SiteHeader,
+  HeaderLinks,
+  HeaderLogo,
+  SimpleButton
 };
